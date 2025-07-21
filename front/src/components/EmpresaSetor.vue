@@ -118,11 +118,8 @@ async function submitVinculo() {
     emit("salvo");
 
     setTimeout(() => {
-      selectedEmpresaId.value = "";
-      selectedSetorId.value = "";
-      setoresDisponiveis.value = [];
-      mensagem.value = "";
-    }, 1000);
+      location.reload();
+    }, 500);
   } catch (error) {
     mensagem.value = error.response?.data?.message || "Erro ao vincular setor.";
     mensagemTipo.value = "erro";
